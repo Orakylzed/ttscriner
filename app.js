@@ -55,7 +55,7 @@ function showGames() {
         let str = '';
         let elem = document.createElement('div');
         elem.classList.add('game-elem');
-        str += ` ID: ${result[i].I} <br> ${result[i].O1} - ${result[i].O2} <br> ${result[i].E[0]} - ${result[i].E[1]}  ||  ${result[i].SC.CPS}`;
+        str += `${result[i].I} <br> ${result[i].O1} - ${result[i].O2} <br> ${(result[i].E[0] < result[i].E[1]) ? "П1" : "П2"} <br> 1-я партия <br><br> ${result[i].E[0]} - ${result[i].E[1]}  ||  ${result[i].SC.CPS}`;
         elem.innerHTML = str;
         rootElement.append(elem);
     }
