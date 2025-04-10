@@ -28,7 +28,7 @@ function dataHundler() {
     
     let c = [];
     for(let i = DATA.length - 1; i>= 0; i--){
-        if(DATA[i].LE == 'Masters. Russia') {
+        if(DATA[i].LE.includes('Masters') && DATA[i].SC.CPS == '1-я партия') {
             result.push(DATA[i]);
         }
     }
